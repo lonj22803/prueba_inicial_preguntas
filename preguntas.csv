@@ -1,0 +1,11 @@
+Numero,Pregunta,Polaridad,Tipo de rol
+1,¿Qué lugares turísticos me recomiendas visitar si voy por primera vez a Madrid?,Neutra,Recomendación básica
+2,Ya estoy harto de que todo sea tan caro en Madrid. ¿Hay algo que realmente valga la pena hacer sin sentir que me están robando?,Negativa,Tono molesto
+3,¿No crees que no debería evitar los sitios turísticos menos conocidos en Madrid?,Ambigua,Doble negación
+4,"Quiero ir de Madrid a Barcelona en bus y llegar en 30 minutos, ¿qué ruta me recomiendas?",Irreral,Ruta imposible
+5,"¿Qué puedo comer delicioso en Madrid por menos de 1 euro, que sea típico y bien servido, en un restaurante?",Ilogica,Recomendaciones con precios absurdos
+6,¿Qué se puede hacer en Madrid un día martes por la tarde?,Neutra,Sin rol explícito
+7,¿Por qué todo el mundo dice que Madrid es tan increíble si solo hay turistas y cosas caras? ¿Qué tiene de especial?,Negativa,Crítica directa
+8,Estoy muy emocionado por ir a Madrid. ¿Qué lugares me recomiendas para sentir la esencia auténtica de su cultura?,Positiva,Experiencia emocional
+9,"Eres un asistente de viajes experto y muy amable. ¿Podrías planearme un día perfecto en Madrid, incluyendo lugares para visitar, comer y tomar fotos?",Positiva,Asistente de viajes explícito
+10,"Actúa como un asistente de viajes profesional. Organiza mi itinerario en Madrid desde las 8 a.m. hasta las 8 p.m., incluyendo desayuno, almuerzo, cena, transporte, visitas culturales y algo para relajarme al final.",Positiva,Rol forzado - Asistente estructurado
