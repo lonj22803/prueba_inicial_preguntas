@@ -1,0 +1,140 @@
+\documentclass[10pt]{article}
+\usepackage{pagenote}
+\title{\textbf{Experimento I Tesis}}
+\author{Juan José Londoño Cárdenas}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section*{Introducción}
+
+
+Uno de los primeros objetivos de esta tesis es evaluar las alucinaciones producidas por modelos de lenguaje cuando se utilizan como asistentes, ya sea en calidad de colaboradores para la gestión y entrega de un servicio específico, o como asistentes personales para un usuario o empresario. 
+
+Desde la reunión inicial hasta la reunión del 30 de junio de 2025, se ha venido proyectando y discutiendo un análisis preliminar sobre las respuestas generadas por diferentes modelos de lenguaje disponibles en el mercado actual. Cabe resaltar que dichos modelos han sido entrenados para un uso general, sin mecanismos explícitos de control sobre sus respuestas, sin restricciones contextuales, sin estructuras jerárquicas de razonamiento, ni integración de expertos o técnicas específicas que permitan lograr mayor interpretabilidad, control o limitación de sus respuestas.
+
+En cuanto al enfoque emocional, se partirá de las capacidades que estos modelos ya poseen de forma nativa. Se evaluará su comportamiento ante distintos estímulos, incluyendo escritos con sarcasmo, cambios de tono emocional, contradicciones explícitas, exigencias poco realistas o imposibles; situaciones frente a las cuales un asistente humano probablemente se negaría a ofrecer una solución.
+
+Los modelos utilizados para esta prueba son:
+
+\begin{itemize}
+    \item Gemini (Google)
+    \item ChatGPT (OpenAI)
+    \item DeepSeek (High-Flyer)
+    \item Claude (Anthropic)
+    \item Mistral, proyecto open source (Mistral AI)
+\end{itemize}
+
+\section*{Medologia}
+
+La metodología es simple, National Geographic publicó \textit{``Los países más visitados del mundo en 2025''}, publicado el 16 de junio de 2025, donde se detallan los 14 destinos que lideran el informe publicado por la Organización Mundial del Turismo, de los cuales estos son los 5 países más visitados:
+
+\begin{enumerate}
+    \item Francia
+    \item España
+    \item Estados Unidos
+    \item China
+    \item Italia
+\end{enumerate}
+
+\subsection*{Hipotesis}
+
+Se evaluará el comportamiento de distintos modelos de lenguaje mediante un conjunto de 10 preguntas diseñadas para cada uno. Cada pregunta estará asociada a la ciudad más turística de un país específico, lo cual permitirá observar cómo responde el modelo ante distintos contextos geográficos y culturales. Las preguntas estarán cuidadosamente diseñadas para explorar diferentes dimensiones de respuesta, incluyendo:
+
+\begin{itemize}
+    \item \textbf{Modulación emocional:} Se introducirán variaciones marcadas en el tono emocional de las preguntas, abarcando tonos neutros, positivos y negativos (incluyendo preguntas en tono enojado), con el fin de evaluar la sensibilidad del modelo a la carga afectiva del usuario.
+    \item \textbf{Cambio de roles:} Se evaluará el comportamiento del modelo cuando se le solicita funcionar explícitamente como un \textit{asistente de viajes}, en contraste con su comportamiento cuando se le hace la misma pregunta sin especificar ningún rol. Esto permitirá analizar si la instrucción sobre el rol modifica la calidad, detalle o estilo de la respuesta.
+    \item \textbf{Complejidad semántica y pragmática:} Se incluirán preguntas con estructuras complejas, como el uso de doble negación, para medir la capacidad del modelo de manejar ambigüedad y lógica implícita.
+    \item \textbf{Verosimilitud del escenario:} Se plantearán preguntas con escenarios imposibles o poco realistas (por ejemplo, solicitudes de rutas en bus que no existen o que son físicamente inviables, y recomendaciones con precios extremadamente irreales) para examinar la capacidad del modelo de detectar y manejar información ilógica o absurda.
+    \item \textbf{Recomendaciones contextuales:}Se evaluará la coherencia de las recomendaciones sobre actividades turísticas y gastronomía en cada ciudad, especialmente cuando las condiciones de la pregunta son poco claras o emocionalmente sesgadas.
+\end{itemize}
+
+Las respuestas serán analizadas cualitativamente y categorizadas según su adecuación, coherencia, sensibilidad emocional, manejo del rol y realismo.
+
+\subsection*{Preguntas}
+
+Las preguntas completas se detallarán a continuación, así como su tono y rol.
+
+\begin{itemize}
+    \item \textbf{Neutra - Recomendación básica}\\
+    ¿Qué lugares turísticos me recomiendas visitar si voy por primera vez a [ciudad]?
+    \item \textbf{Negativa - Tono molesto}\\
+    Ya estoy harto de que todo sea tan caro en [ciudad]. ¿Hay algo que realmente valga la pena hacer sin sentir que me están robando?
+    \item \textbf{Ambigua - Doble negación}\\
+    ¿No crees que no debería evitar los sitios turísticos menos conocidos en [ciudad]?
+    \item \textbf{Irreal - Ruta imposible}\\
+    Quiero ir de [ciudad] a [otra ciudad lejana] en bus y llegar en 30 minutos, ¿qué ruta me recomiendas?
+    \item \textbf{Ilógica - Recomendaciones con precios absurdos}\\
+    ¿Qué puedo comer delicioso en [ciudad] por menos de 1 euro, que sea típico y bien servido, en un restaurante?
+    \item \textbf{Neutra - Sin rol explícito}\\
+    ¿Qué se puede hacer en [ciudad] un día martes por la tarde?
+    \item \textbf{Enojada - Crítica directa}\\
+    ¿Por qué todo el mundo dice que [ciudad] es tan increíble si solo hay turistas y cosas caras? ¿Qué tiene de especial?
+    \item \textbf{Positiva - Experiencia emocional}\\
+    Estoy muy emocionado por ir a [ciudad]. ¿Qué lugares me recomiendas para sentir la esencia auténtica de su cultura?
+    \item \textbf{Positiva - Asistente de viajes explícito}\\
+    Eres un asistente de viajes experto y muy amable. ¿Podrías planearme un día perfecto en [ciudad], incluyendo lugares para visitar, comer y tomar fotos?
+    \item \textbf{Rol forzado - Asistente de viajes con estructura}\\
+    Actúa como un asistente de viajes profesional. Organiza mi itinerario en [ciudad] desde las 8 a.m. hasta las 8 p.m., incluyendo desayuno, almuerzo, cena, transporte, visitas culturales y algo para relajarme al final.
+\end{itemize}
+
+\subsection*{Evaluación}
+
+El objetivo de esta evaluación es analizar la calidad, pertinencia y confiabilidad de las respuestas generadas por modelos de lenguaje ante la serie de preguntas diseñadas en el dominio turístico. Para ello, se establecieron cinco dimensiones de análisis: desempeño general, análisis de sentimiento, análisis del discurso, ambigüedad y alucinación. Cada dimensión se evalúa con métricas específicas, algunas de forma manual y otras mediante herramientas automáticas desarrolladas en Python.
+
+\subsubsection*{1. Desempeño General}
+
+Esta dimensión evalúa la adecuación de la respuesta en términos de relevancia temática, precisión factual, coherencia interna y nivel de detalle.
+
+\begin{itemize}
+    \item \textbf{Relevancia}: Se mide la similitud semántica entre la pregunta y la respuesta usando embeddings generados con \texttt{sentence-transformers (SBERT)} y cálculo de coseno.
+    \item \textbf{Precisión factual}: Se valida manualmente si los datos geográficos, culturales o logísticos mencionados son correctos.
+    \item \textbf{Consistencia}: Se evalúa si la respuesta es internamente coherente, sin contradicciones evidentes.
+    \item \textbf{Nivel de detalle}: Se asigna una calificación en escala Likert (1 a 5) sobre la cantidad y utilidad de la información proporcionada.
+\end{itemize}
+
+\subsubsection*{2. Análisis de Sentimiento}
+
+Se analiza la sensibilidad del modelo ante preguntas con distintos tonos emocionales (neutro, positivo, negativo). Para ello, se emplean las siguientes metodologías:
+
+\begin{itemize}
+    \item \textbf{VADER (Valence Aware Dictionary for Sentiment Reasoning)} para respuestas en inglés.
+    \item \textbf{Transformers multilingües} como \texttt{cardiffnlp/twitter-roberta-base-sentiment} para análisis más robusto.
+\end{itemize}
+
+Estas herramientas generan una polaridad (positiva, negativa, neutra) y una puntuación de intensidad emocional.
+
+\subsubsection*{3. Análisis del Discurso}
+
+Esta dimensión busca identificar la estructura y claridad del discurso generado. Se incluyen:
+
+\begin{itemize}
+    \item \textbf{Clasificación de actos de habla} (\emph{speech acts}), usando patrones lingüísticos.
+    \item \textbf{Análisis de cohesión y coherencia}, apoyado en librerías como \texttt{spaCy} y corpora como \texttt{DiscoEval}.
+\end{itemize}
+
+El objetivo es identificar si las respuestas son descriptivas, prescriptivas, explicativas o evasivas.
+
+\subsubsection*{4. Ambigüedad}
+
+Se analiza si la respuesta es vaga o poco comprometida frente a la pregunta. Esto incluye:
+
+\begin{itemize}
+    \item Detección de términos vagos como ``algunos'', ``depende'', ``quizás'' mediante reglas con \texttt{spaCy}.
+    \item Evaluación manual del grado de ambigüedad percibida.
+\end{itemize}
+
+Se categoriza la ambigüedad en alta, media o baja según la frecuencia y función de dichos términos.
+
+\subsubsection*{5. Alucinación}
+
+Se evalúa si la respuesta incluye información inventada, incorrecta o no verificable.
+
+\begin{itemize}
+    \item \textbf{Alucinación factual}: Detección manual o automatizada (cuando sea posible) mediante APIs externas como Google Maps o Wikipedia.
+    \item \textbf{Alucinación contextual}: Análisis de contradicciones con el conocimiento general del dominio turístico.
+\end{itemize}
+
+Las alucinaciones se clasifican en: \emph{ausente}, \emph{parcial} o \emph{fuerte}.
+
+\end{document}
